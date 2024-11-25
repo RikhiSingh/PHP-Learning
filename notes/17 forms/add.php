@@ -2,11 +2,18 @@
 
     // _GET is global array
     // isset - checks if a variable is set
-    if(isset($_GET['submit'])) {
-        
-        echo $_GET['title'];
-        echo $_GET['email'];
-        echo $_GET['ingredients'];
+    // if(isset($_GET['submit'])) {
+
+    //     echo $_GET['title'];
+    //     echo $_GET['email'];
+    //     echo $_GET['ingredients'];
+    // }
+
+    if(isset($_POST['submit'])) {
+
+        echo $_POST['title'];
+        echo $_POST['email'];
+        echo $_POST['ingredients'];
     }
 
 ?>
@@ -20,7 +27,7 @@
         <h4 class="center">
             Add a pizza
         </h4>
-        <form action="add.php" method="GET" class="white">
+        <form action="add.php" method="POST" class="white">
             <label>Your Email:</label>
             <input type="text" name="email">
             <label>Pizza title:</label>
